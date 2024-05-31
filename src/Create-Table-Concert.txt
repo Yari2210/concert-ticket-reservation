@@ -1,0 +1,11 @@
+CREATE TABLE concert_test (
+id BIGINT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(255) NOT NULL,
+artist VARCHAR(255) NOT NULL,
+date DATETIME NOT NULL,
+total_tickets INT NOT NULL,
+available_tickets INT NOT null,
+status enum('NOT_AVAILABLE','AVAILABLE','SOLDOUT','EXPIRED') DEFAULT 'NOT_AVAILABLE',
+venue varchar(255) DEFAULT NULL,
+start_sell_date datetime DEFAULT NULL,
+end_sell_date datetime DEFAULT NULL);

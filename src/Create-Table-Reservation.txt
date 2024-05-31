@@ -1,0 +1,11 @@
+   CREATE TABLE booking_test (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    concert_id BIGINT NOT NULL,
+    user VARCHAR(255) NOT NULL,
+    number_of_tickets INT NOT NULL,
+    booking_time DATETIME NOT NULL,
+    status enum('WAITING_FOR_PAYMENT','ALREADY_PAID','FAILED_TO_PAY'),
+    payment_method enum('VIRTUALACCOUNT','DANA','GOPAY','SHOPPEPAY','OVO'),
+    payment_time DATETIME,
+    FOREIGN KEY (concert_id) REFERENCES concert(id)
+);

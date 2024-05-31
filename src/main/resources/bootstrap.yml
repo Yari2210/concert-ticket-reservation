@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: concert-ticket-reservation
+  profiles:
+    active: test
+  cloud:
+    config:
+      uri: http://localhost:10000
+  main:
+    allow-bean-definition-overriding: true
+---
+spring:
+  profiles: test
+  cloud:
+    config:
+      enabled: false

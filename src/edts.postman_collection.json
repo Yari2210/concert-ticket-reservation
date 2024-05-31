@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "0b4e39bf-2c78-4a21-80f4-30ac5ffa53d0",
+		"name": "edts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13513306"
+	},
+	"item": [
+		{
+			"name": "localhost:9191/concert/ticket/reservation/v1.0/concerts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"paging\": {\r\n        \"page\": 1,\r\n        \"limit\": 10\r\n    },\r\n    \"parameter\": {\r\n        \"column\": [],\r\n        \"criteria\": {},\r\n        \"sort\": {\r\n        },\r\n        \"data\": {}\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9191/concert/ticket/reservation/v1.0/concerts",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"concert",
+						"ticket",
+						"reservation",
+						"v1.0",
+						"concerts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:9191/concert/ticket/reservation/v1.0/reservation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"parameter\": {\r\n        \"data\": {\r\n            \"concertid\": 233,\r\n            \"user\": \"rinaldi\",\r\n            \"numberoftickets\": 5,\r\n            \"paymentmethod\":\"ovo\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9191/concert/ticket/reservation/v1.0/reservation",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"concert",
+						"ticket",
+						"reservation",
+						"v1.0",
+						"reservation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9191/concert/ticket/reservation/v1.0/payment?paymentnumber={paymentnumber}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9191/concert/ticket/reservation/v1.0/payment?paymentnumber={paymentnumber}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"concert",
+						"ticket",
+						"reservation",
+						"v1.0",
+						"payment"
+					],
+					"query": [
+						{
+							"key": "paymentnumber",
+							"value": "{paymentnumber}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
