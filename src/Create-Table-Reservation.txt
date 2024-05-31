@@ -1,4 +1,4 @@
-   CREATE TABLE booking_test (
+   CREATE TABLE reservation (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     concert_id BIGINT NOT NULL,
     user VARCHAR(255) NOT NULL,
